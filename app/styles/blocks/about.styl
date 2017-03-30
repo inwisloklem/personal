@@ -1,0 +1,72 @@
+.about
+  padding-top 40px
+
+  @media $tablet-desktop
+    padding-top 80px
+
+  &__list
+    list-style none
+
+  &__item
+    margin-bottom 70px
+    display flex
+    flex-direction column
+
+    @media $desktop
+      flex-direction row
+      
+      &:nth-of-type(2n+2)
+        flex-direction row-reverse
+
+  &__num
+    margin-bottom 50px
+    border-bottom 15px solid $persian-green
+    width 75px
+    color $mercury
+    font(4.5em, 1, 700)
+    
+    @media $tablet-desktop
+      width 90px
+
+  &__block
+    color $dove-gray
+    font(1.125em, 1.2, 400)
+
+    @media $tablet
+      padding 0 40px
+
+    @media $desktop
+      padding 0 60px
+
+  &__image
+    position relative
+
+    img
+      max-width 100%
+
+      @media $tablet-desktop
+        max-width 405px
+        max-height 310px
+    
+    @media $tablet
+      padding 0 40px
+      margin-bottom 40px
+
+    @media $tablet-desktop
+      &::before
+        box-sizing border-box
+        position absolute
+        z-index 5
+        display block
+        width 405px
+        height 310px
+        content ""
+        border 10px solid $persian-green
+
+        @media $tablet
+          top 20px
+          left 60px
+          
+        @media $desktop
+          top 20px
+          left 20px

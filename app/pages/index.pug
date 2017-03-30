@@ -1,0 +1,157 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/svg-sprite.pug
+
+    header
+      section.personal
+        .personal__block.personal__block--reverse
+          .personal__logo
+            img(src = "img/image-logo.png", width = 229, height = 73, alt = "Доктор Борменталь")
+
+        .container
+          .personal__hgroup
+            h2.personal__title #[span.hide Получи] бесплатный индивидуальный план похудения
+            h3.personal__fn На бесплатной консультации диетолога в центре «Доктор Борменталь»
+
+        .personal__block
+          .personal__text Акция действует
+          .personal__text.personal__text--date До 29 марта!
+          .personal__text Осталось 3 места!
+
+    main
+      section.features
+        .container
+          .features__title Запишись и получи:
+
+          ul.features__list
+            li.features__item
+              svg.features__icon(width = 47, height = 53)
+                use(xlink:href = "#icon-features-1")
+              .features__text
+                | Полную диагностику организма на уникальном аппарате "ESTECK SYSTEM"
+            li.features__item
+              svg.features__icon(width = 55, height = 54)
+                use(xlink:href = "#icon-features-2")
+              .features__text
+                | Квалифицированную консультацию лучших специалистов России на основании тестирования
+            li.features__item
+              svg.features__icon(width = 50, height = 50)
+                use(xlink:href = "#icon-features-3")
+              .features__text
+                | Выявление и разбор ваших личных причин набора избыточного веса
+            li.features__item
+              svg.features__icon(width = 50, height = 50)
+                use(xlink:href = "#icon-features-4")
+              .features__text
+                | Расчет оптимальной программы по снижению веса с учетом особенности вашего организма
+
+      section.order
+        .container
+          h2.order__title Укажите свои данные
+
+          form.form.order__form(action = "#", method = "post")
+            p.form__row
+              label.form__label Вес*
+              input.form__input.form__input--s(type = "text", name = "weight")
+              span.form__unit кг
+
+            p.form__row
+              label.form__label Рост*
+              input.form__input.form__input--s(type = "text", name = "height")
+              span.form__unit см
+
+            p.form__row
+              label.form__label Возраст*
+              input.form__input.form__input--s(type = "text", name = "age")
+              span.form__unit лет
+
+            p.form__row
+              label.form__label Имя*
+              input.form__input.form__input--l(type = "text", name = "name")
+
+            p.form__row
+              label.form__label Телефон*
+              input.form__input.form__input--l(type = "tel", name = "phone")
+
+            p.form__row
+              button.btn.form__btn(type = "submit") Записаться
+
+      section.about
+        .container
+          h2.visually-hidden О нашей методике
+
+          ul.about__list
+            li.about__item
+              .about__image
+                img(src = "img/image-about-1.jpg", alt = "01")
+              .about__block
+                h2.about__num 01
+                p.about__text 
+                  | Мы специализируемся на снижении веса, предоставляя исключительно высококачественные услуги каждому клиенту, и мы горды тем, что можем называть себя компанией номер 1 в своей отрасли
+            li.about__item
+              .about__image
+                img(src = "img/image-about-2.jpg", alt = "02")
+              .about__block
+                h2.about__num 02
+                p.about__text 
+                  | Наш 15-ти летний опыт работы позволяет быстрее определять оптимальную методику избавления от лишнего веса для каждого клиента
+            li.about__item
+              .about__image
+                img(src = "img/image-about-3.jpg", alt = "03")
+              .about__block
+                h2.about__num 03
+                p.about__text 
+                  | Мы используем индивидуальный подход к каждому клиенту, пока другие компании продвигают лишь одну методику, да и то сомнительной эффективности.
+            li.about__item
+              .about__image
+                img(src = "img/image-about-4.jpg", alt = "04")
+              .about__block
+                h2.about__num 04
+                p.about__text 
+                  | За время нашей работы мы помогли более 500 000 клиентам раз и навсегда избавиться от проблем с лишним весом
+
+      section.explain
+        .container
+          h2.explain__title Наша методика дает не кратковременный результат – вы избавляетесь от лишних килограмм всерьез и надолго
+
+        section.prohibit.explain__prohibit
+          h2.prohibit__title Противопоказания:
+
+          ul.prohibit__list
+            li.prohibit__item 
+              svg.prohibit__icon(width = 35, height = 30)
+                use(xlink:href = "#icon-danger")
+              | Беременность
+            li.prohibit__item
+              svg.prohibit__icon(width = 35, height = 30)
+                use(xlink:href = "#icon-danger")
+              | Лактация
+            li.prohibit__item
+              svg.prohibit__icon(width = 35, height = 30)
+                use(xlink:href = "#icon-danger")
+              | Кардиостимулятор
+            li.prohibit__item
+              svg.prohibit__icon(width = 35, height = 30)
+                use(xlink:href = "#icon-danger")
+              | Сахарный диабет
+
+        .container
+          p.explain__text
+            | Вы не ограничиваете себя в любимых продуктах, но при этом должны будете четко соблюдать рекомендации нашего диетолога
+
+          p.explain__fn Мы гарантируем отсутствие спама и навязчивых рекламных предложений
+
+    footer
+      section.copyright
+        .copyright__text
+          | ООО "Доктор Борменталь"
+          br
+          | Лицензия № ЛО-77-01-006633 от 04.09.2013 г.
+          br
+          | 121059, г. Москва, Украинский бульвар, д. 5
+
+        a.copyright__link(href = "http://cpapartizan.ru/politika.php") Политика конфиденциальности

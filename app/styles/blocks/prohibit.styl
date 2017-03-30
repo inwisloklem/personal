@@ -1,0 +1,36 @@
+.prohibit
+  padding 40px 0
+
+  color $white
+  background-color $tundora
+
+  @media $tablet-desktop
+    background-color rgba($black, 0.5)
+
+  &__title
+    margin-bottom 40px
+    text-align center
+    font(1.5em, 1.2, 700, uppercase)
+
+    @media $tablet-desktop
+      font(3em)
+
+  &__list
+    margin auto
+    width 300px
+    list-style none
+    text-align left
+    font(1.5em, 1.2, 400)
+
+  &__item
+    position relative
+    margin-bottom 20px
+    padding-left 60px
+
+  &__icon
+    position absolute
+    left 10px
+    top 50%
+    
+    transform translateY(-50%)
+    

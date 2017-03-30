@@ -1,0 +1,38 @@
+.features
+  padding 80px 0
+
+  &__title
+    margin-bottom 40px
+    color $eastern-blue
+    text-align center
+    font(2em, 1.2, 700, uppercase)
+    
+    @media $tablet-desktop
+      font(3em)
+
+  &__list
+    display flex
+    flex-direction row
+    list-style none
+    flex-wrap wrap
+    margin-bottom -80px
+
+  &__item
+    box-sizing border-box
+    position relative
+    margin-bottom 80px
+    padding-right 10px
+    padding-left 70px
+    font(1em, 1.2, 400)
+    flex-basis 100%
+
+    @media $tablet
+      flex-basis 50%
+      
+    @media $desktop
+      flex-basis 25%
+
+  &__icon
+    position absolute
+    top 0
+    left 0

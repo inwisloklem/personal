@@ -1,0 +1,21 @@
+.btn
+  display block
+  padding 22px 34px
+  padding-top 18px
+  color $white
+  outline none
+  border none
+  border-radius 5px
+  text-align center
+  text-decoration none
+  font(1.125em, 1, 300, uppercase)
+
+  background-color $orange-peel
+  box-shadow inset 0 -6px 0 $orange
+  
+  &:hover
+    background-color lighten($orange-peel, 20%)
+    box-shadow inset 0 -6px 0 lighten($orange, 20%)
+
+button.btn
+  width 100%
